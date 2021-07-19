@@ -120,7 +120,7 @@ CNMEAParserData::ERROR_E CNMEASentenceGGA::ProcessSentence(char * pCmd, char * p
 	//
 	// Geoidal separation, meters
 	//
-	if (GetField(pData, szField, 9, c_nMaxField) == CNMEAParserData::ERROR_OK)
+	if (GetField(pData, szField, 10, c_nMaxField) == CNMEAParserData::ERROR_OK)
 	{
 		m_SentenceData.m_dGeoidalSep = atof((char *)szField);
 	}
@@ -128,7 +128,7 @@ CNMEAParserData::ERROR_E CNMEASentenceGGA::ProcessSentence(char * pCmd, char * p
 	//
 	// Differential age
 	//
-	if (GetField(pData, szField, 11, c_nMaxField) == CNMEAParserData::ERROR_OK)
+	if (GetField(pData, szField, 12, c_nMaxField) == CNMEAParserData::ERROR_OK)
 	{
 		m_SentenceData.m_dDifferentialAge = atof((char *)szField);
 	}
